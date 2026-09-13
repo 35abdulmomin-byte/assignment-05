@@ -14,7 +14,7 @@ function Navbar() {
 
         <div className="brand">
           <img className="logo-img" src={logoText} alt="DevStack" />
-          <span>DevStack</span>
+      
         </div>
 
    
