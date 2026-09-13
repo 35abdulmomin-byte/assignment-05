@@ -120,7 +120,6 @@ body {
   font-size: 9px;
   cursor: pointer;
 }
-
 .sign-up {
   border: none;
   background: #df1971;
@@ -138,8 +137,6 @@ body {
   font-size: 23px;
   cursor: pointer;
 }
-
-
 .hero {
   min-height: calc(100vh - 60px);
 }
