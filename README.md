@@ -20,7 +20,7 @@ DevStack is a React-based application where users can explore different technolo
 * 🗑️ Remove technologies from your stack
 * 🔔 Toast notifications for add, remove, and duplicate actions
 
----
+
 
 # ❓ React Questions & Answers
 
