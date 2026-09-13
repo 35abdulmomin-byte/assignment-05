@@ -1,3 +1,8 @@
+
+:root {
+  --brand-gradient: linear-gradient(135deg, #ff7518 0%, #e91e63 50%, #8b32d9 100%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +19,25 @@ body {
   color: #111827;
 }
 
+.gradient-text {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-btn {
+  background: var(--brand-gradient) !important;
+  color: white !important;
+  border: none !important;
+  transition: opacity 0.2s ease;
+}
+
+.gradient-btn:hover {
+  opacity: 0.9;
+}
+
+
 .navbar {
   width: 100%;
   height: 60px;
@@ -29,7 +53,6 @@ body {
   height: 100%;
   margin: auto;
   padding: 0 25px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,15 +64,19 @@ body {
   gap: 8px;
 }
 
+.logo-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .logo {
   width: 21px;
   height: 21px;
   border-radius: 5px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: linear-gradient(135deg, #b43ce8, #e91e63);
   color: white;
   font-size: 8px;
@@ -75,10 +102,7 @@ body {
   transition: 0.3s;
 }
 
-.nav-links a:hover {
-  color: #e51b70;
-}
-
+.nav-links a:hover,
 .nav-links .active-link {
   color: #e51b70;
 }
@@ -101,10 +125,8 @@ body {
   border: none;
   background: #df1971;
   color: white;
-
   padding: 7px 15px;
   border-radius: 20px;
-
   font-size: 9px;
   cursor: pointer;
 }
@@ -117,7 +139,6 @@ body {
   cursor: pointer;
 }
 
-/* Hero */
 
 .hero {
   min-height: calc(100vh - 60px);
@@ -126,10 +147,8 @@ body {
 .hero-container {
   max-width: 1100px;
   min-height: calc(100vh - 60px);
-
   margin: auto;
   padding: 50px 25px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -148,24 +167,17 @@ body {
 }
 
 .hero-content h1 span {
-  background: linear-gradient(
-    90deg,
-    #ff4b27,
-    #e91e63,
-    #8b32d9
-  );
-
+  background: var(--brand-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-content p {
   width: 480px;
-
   color: #667085;
   font-size: 12px;
   line-height: 1.6;
-
   margin-bottom: 30px;
 }
 
@@ -178,22 +190,15 @@ body {
 .learn-btn {
   height: 27px;
   padding: 0 13px;
-
   border-radius: 5px;
   font-size: 9px;
-
   cursor: pointer;
 }
 
 .explore-btn {
   border: none;
   color: white;
-
-  background: linear-gradient(
-    90deg,
-    #ff7518,
-    #e91e63
-  );
+  background: var(--brand-gradient);
 }
 
 .learn-btn {
@@ -213,93 +218,7 @@ body {
   max-width: 100%;
 }
 
-/* Mobile */
 
-@media (max-width: 768px) {
-
-  .nav-container {
-    padding: 0 20px;
-  }
-
-  .nav-links {
-    display: none;
-
-    position: absolute;
-    top: 60px;
-    left: 0;
-
-    width: 100%;
-    padding: 25px;
-
-    background: white;
-
-    flex-direction: column;
-    gap: 20px;
-
-    border-bottom: 1px solid #eeeeee;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: block;
-    order: -1;
-  }
-
-  .brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .auth-buttons {
-    margin-left: auto;
-  }
-
-  .sign-in {
-    display: none;
-  }
-
-  .sign-up {
-    padding: 7px 13px;
-  }
-
-  .hero-container {
-    padding: 60px 20px;
-
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-content {
-    width: 100%;
-  }
-
-  .hero-content h1 {
-    font-size: 35px;
-  }
-
-  .hero-content p {
-    width: 100%;
-    max-width: 500px;
-    margin: 18px auto 25px;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-image {
-    width: 80%;
-    margin-top: 45px;
-  }
-
-  .hero-image img {
-    width: 280px;
-  }
-}
 .footer {
   width: 100%;
   background: #ffffff;
@@ -311,7 +230,6 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 25px 40px;
-
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 50px;
@@ -334,10 +252,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: linear-gradient(135deg, #a83ee8, #e91e63);
   color: white;
-
   border-radius: 4px;
   font-size: 6px;
   font-weight: bold;
@@ -394,9 +310,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 18px 25px;
-
   border-top: 1px solid #eeeeee;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -418,7 +332,87 @@ body {
   color: #98a2b3;
 }
 
+
 @media (max-width: 768px) {
+  .nav-container {
+    padding: 0 20px;
+    position: relative;
+  }
+
+  .menu-btn {
+    display: block;
+    order: -1;
+  }
+
+  .brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .auth-buttons {
+    margin-left: auto;
+  }
+
+  .sign-in {
+    display: none;
+  }
+
+  .sign-up {
+    padding: 7px 13px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background: white;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero-container {
+    padding: 60px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 35px;
+  }
+
+  .hero-content p {
+    width: 100%;
+    max-width: 500px;
+    margin: 18px auto 25px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 80%;
+    margin-top: 45px;
+  }
+
+  .hero-image img {
+    width: 280px;
+  }
+
   .footer-container {
     grid-template-columns: 1fr 1fr;
     gap: 35px;
@@ -443,25 +437,4 @@ body {
   .footer-brand {
     grid-column: auto;
   }
-}
-:root {
-  --brand-gradient: linear-gradient(135deg, #ff7518 0%, #e91e63 50%, #8b32d9 100%);
-}
-
-.gradient-text {
-  background: var(--brand-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gradient-btn {
-  background: var(--brand-gradient) !important;
-  color: white !important;
-  border: none !important;
-  transition: opacity 0.2s ease;
-}
-
-.gradient-btn:hover {
-  opacity: 0.9;
 }
